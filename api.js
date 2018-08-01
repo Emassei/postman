@@ -4,7 +4,7 @@ require('dotenv').config();
 var options = {
   url: 'https://api.getpostman.com/collections',
   headers: {
-    'X-Api-Key': process.env.API_KEY
+    'X-Api-Key': process.env.API_KEY || 'API_KEY'
   }
 };
  
