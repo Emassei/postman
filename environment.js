@@ -6,13 +6,12 @@ require('dotenv').config();
 newmanUrl = 'https://api.getpostman.com/collections/';
 params = "\?apikey\=";
 
-environmentId = process.env.ENVIRONMENT_ID || 'ENVIRONMENT_ID';
 apiKey = process.env.API_KEY || 'API_KEY';
 
 
 
 var options = {
-  url: 'https://api.getpostman.com/collections',
+  url: 'https://api.getpostman.com/environments',
   headers: {
     'X-Api-Key': apiKey
   }
@@ -21,9 +20,9 @@ var options = {
 function callback(error, response, body) {
   if (!error && response.statusCode == 200) {
     var info = JSON.parse(body);
-    length = Object.keys(info.collections).length;
+    length = Object.keys(info.environments).length;
     for (var i = 0; i < length; i++) {
-      console.log(info.collections[i].uid + ' ' + info.collections[i].name);
+      console.log(info);
     }
   }
 }

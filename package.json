@@ -10,7 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^6.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "newman": "^3.10.0",
     "node-inspector": "^1.1.2",
-    "request": "^2.87.0"
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
   }
 }
